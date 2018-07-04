@@ -1,0 +1,309 @@
+/* ------------------------------------------------------------ *\
+    Reset
+\* ------------------------------------------------------------ */
+
+*,
+*:before,
+*:after { padding: 0; margin: 0; outline: 0; box-sizing: border-box; }
+
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+body { background-color: #fff; font-family: 'Gotham Book', sans-serif; font-size: 16px; line-height: 2em; color: #242522; letter-spacing: 0.03em }
+
+a { color: #3c1053; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { color: #242522; margin-bottom: 30px; letter-spacing: 0; }
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 26px; }
+h4 { font-size: 24px; color: #3c1053; }
+h5 { font-size: 16px; color: #84bd00; text-transform: uppercase; }
+h6 { font-size: 14px; }
+
+p,
+ul,
+ol { margin-bottom: 2em; }
+
+ul,
+ol { padding-left: 1em; }
+
+img { max-width: 100%; height: auto; vertical-align: middle; } 
+
+@media(max-width: 1023px){
+	h1 { font-size: 22px; }
+	h2 { font-size: 20px; }
+	h3 { font-size: 18px; }
+	h4 { font-size: 17px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper { overflow: hidden; }
+
+/* ------------------------------------------------------------ *\
+	Shell
+\* ------------------------------------------------------------ */
+
+.shell { max-width: 1200px; padding: 0 15px; margin: 0 auto;  }
+
+/* ------------------------------------------------------------ *\
+	Sprite
+\* ------------------------------------------------------------ */
+
+.ico-phone,
+.ico-arrow-right,
+.ico-arrow-right-small { display: inline-block; vertical-align: middle; font-size: 0; background: url(images/sprite.png) no-repeat; }
+
+.ico-phone { width: 33px; height: 33px; background-position: 0 0; }
+.ico-arrow-right { width: 21px; height: 16px; background-position: -40px -8px; }
+.ico-arrow-right-small { width: 18px; height: 13px; background-position: -64px -10px; }
+
+/* ------------------------------------------------------------ *\
+	Header 
+\* ------------------------------------------------------------ */
+
+.header .header__inner { display: flex; justify-content: space-between; align-items: center; padding: 11px 0 18px; }
+
+/* ------------------------------------------------------------ *\
+	Phone
+\* ------------------------------------------------------------ */
+
+.phone { min-width: 150px; line-height: 1em; }
+
+.phone:after { content: ''; display: table; clear: both; line-height: 0; }
+
+.phone p { overflow: hidden; margin-bottom: 0; }
+.phone span { font-size: 11.72px; }
+.phone a { font-family: 'Gotham', sans-serif; font-weight: bold; }
+.phone i { float: left; margin-right: 12px; }
+
+/* ------------------------------------------------------------ *\
+	Intro
+\* ------------------------------------------------------------ */
+
+.intro { background-size: cover; }
+
+.intro .intro__content { padding: 155px 0 180px; max-width: 68%; margin: auto; text-align: center; line-height: 2.6em; }
+.intro .intro__title { font-size: 22px; margin-bottom: 16px; }
+.intro .intro__subtitle { margin-bottom: 50px; font-weight: 300; color: #fff; text-transform: uppercase; }
+.intro .intro__actions { font-size: 13px; }
+
+.intro .intro__actions .btn { min-width: 330px; }
+
+@media(max-width: 1023px){
+	.intro .intro__content { max-width: 90%; }
+	.intro .intro__actions { font-size: 11px; min-width: 90%; }	
+}
+
+@media(max-width: 767px){
+	.intro .intro__actions .btn { min-width: 100%; }
+	
+}
+
+/* ------------------------------------------------------------ *\
+	Button/Btn
+\* ------------------------------------------------------------ */
+
+.btn { display: inline-flex; justify-content: space-between; align-items: center; padding: 0 14px; background-color: #84bd00;  min-height: 39px; vertical-align: middle; text-transform: uppercase; color: #fff; font-weight: bold; cursor: pointer; line-height: 39px; }
+
+/* ------------------------------------------------------------ *\
+	Contacts
+\* ------------------------------------------------------------ */
+
+.contacts { background-color: #efefef; }
+
+.contacts .contacts__inner { text-transform: uppercase; box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.09); transform: translateY(-50%); background-color: #fff; }
+
+.contacts ul { display: flex; list-style-type: none; margin-bottom: 0; padding-left: 0; }
+.contacts li { position: relative; width: 25%; }
+.contacts a { display: inline-block; width: 100%; height: 100%; padding: 17px 37px 17px 32px; color: inherit; line-height: 1.8; }
+.contacts .contacts__btn { background-color: #84bd00; color: #fff; }
+
+.contacts .contacts__btn i {position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
+
+.contacts li ~ li:not(:last-child) a:before { content: ''; position: absolute; top: 10px; left: 0; display: inline-block; width: 1px; height: 76px; background-color: #e0e0e0; }
+
+@media(max-width: 1024px){
+	.contacts { padding-top: 40px; }
+
+	.contacts .contacts__inner { transform: translateY(0); }
+
+	.contacts ul { display: block; }
+	.contacts li { width: 100%; }
+
+	.contacts li ~ li:not(:last-child) a:before { content: ''; position: absolute; top: 0; left: 0; display: inline-block; width: 90%; height: 1px; background-color: #e0e0e0; }
+
+}
+
+/* ------------------------------------------------------------ *\
+	Section 
+\* ------------------------------------------------------------ */
+
+.section .section__head { text-align: center; }
+.section .section__title { margin-bottom: 5px; }
+.section .section__subtitle { margin-bottom: 40px; }
+
+.section .section__body { display: flex; justify-content: space-between; }
+.section .section__content { width: 56%; display: flex; justify-content: center; }
+.section .section__aside { width: 41%; padding-top: 20px; }
+
+@media(max-width: 1023px){
+	.section .section__head { text-align: left; }
+	.section .section__subtitle { margin-bottom: 0; }
+
+	.section .section__body { display: block; }
+
+	.section .section__content,
+	.section .section__aside { width: 100%; }
+}
+
+/* ------------------------------------------------------------ *\
+	Section About
+\* ------------------------------------------------------------ */
+
+.section--about { padding: 55px 0 85px; background-color: #efefef; }
+
+.section--about .section__content { order: 1; }
+.section--about .section__aside { order: 2; }
+
+@media(max-width: 1023px){
+	.section--about { padding: 20px 0; }
+
+	.section--about .section__content { order: 2; }
+	.section--about .section__aside { order: 1; }
+	
+}
+
+/* ------------------------------------------------------------ *\
+	Team Members
+\* ------------------------------------------------------------ */
+
+.member { position: relative; }
+
+.member .member__image img { width: 100%; }
+
+.member .member__content { position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 20px 35px; background-color: rgba(255, 255, 255, .9); line-height: 1.5; }
+
+.member .member__name,
+.member .member__job-title,
+.member .member__description p { margin-bottom: 0; }
+
+@media(max-width: 767px){
+	.member .member__content { position: relative; display: block; }
+
+	.member .member__description p { margin-bottom: 1em; }
+}
+
+/* ------------------------------------------------------------ *\
+	Section Plan
+\* ------------------------------------------------------------ */
+
+.section--plan { padding: 93px 0 107px; border-bottom: 1px solid #e7e7e7; }
+
+@media(max-width: 1023px){
+	.section--plan { padding: 5px 0 34px; }	
+}
+
+/* ------------------------------------------------------------ *\
+	Plan Image
+\* ------------------------------------------------------------ */
+
+@media(max-width: 767px){
+	.plan-image img { width: 100%; height: 100%; }
+}
+
+/* ------------------------------------------------------------ *\
+	Cols
+\* ------------------------------------------------------------ */
+
+.cols { display: flex; margin: 0 -15px; }
+
+.col { width: 100%; padding: 0 15px; }
+
+.col--1of4 { width: 25%; }
+
+@media(max-width: 1023px){
+	.col { width: 50% }
+}
+
+@media(max-width: 767px){
+	.cols { display: block; }
+
+	.col { width: 100%; }
+}
+
+/* ------------------------------------------------------------ *\
+	Section Trending 
+\* ------------------------------------------------------------ */
+
+.section--trending { padding: 107px 0 15px; }
+
+@media(max-width: 767px){
+	.section--trending .col:last-of-type { display: none; }	
+}
+
+
+/* ------------------------------------------------------------ *\
+	Article Large
+\* ------------------------------------------------------------ */
+
+.article-large { margin-bottom: 1em; }
+
+/* ------------------------------------------------------------ *\
+	Article
+\* ------------------------------------------------------------ */
+
+.article { margin-bottom: 56px; }
+
+.article .article__image img { width: 100%; }
+
+.article .article__title { text-transform: none; color: #343434; margin-bottom: 0; line-height: 1.8em; }
+.article .article__entry { font-size: 12px; line-height: 1.6em; min-height: 100px; }
+.article .article__meta { display: flex; justify-content: space-between; font-size: 12px; }
+
+.article .article__source { text-transform: uppercase; color: #7a7b7a; font-weight: bold; }
+
+.article .article__entry p { margin-bottom: 0; }
+
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+
+.footer { background-color: #1e252f; color: #fff; }
+
+.footer .footer__content { display: flex; justify-content: space-between; align-items: baseline; padding: 42px 0; }
+
+.footer .footer__content .btn { font-weight: normal; font-size: 12px; }
+
+.footer .footer__contacts { font-size: 14px; }
+
+.footer .footer__contacts ul { display: flex; list-style-type: none; }
+.footer .footer__contacts li { padding-right: 70px; }
+.footer .footer__contacts a { color: inherit; display: flex; }
+.footer .footer__contacts p { margin-bottom: 0; }
+
+.footer .footer__contacts i { font-size: 20px; width: 34px; height: 34px; line-height: 32px; text-align: center; border: 2px solid #fff; border-radius: 100%; margin-right: 15px; }
+
+/* ------------------------------------------------------------ *\
+	Copyright
+\* ------------------------------------------------------------ */
+
+.copyright { font-size: 12px;  }
+
+.copyright a { color: inherit; }
+
+
+
+
+
